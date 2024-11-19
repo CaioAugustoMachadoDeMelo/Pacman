@@ -16,51 +16,51 @@ void Move(char mapa[27][77], char move) {
     for (int i = 0; i < 27; i++) {
         for (int j = 0; j < 77; j++) {
             
-            if (mapa[i][j] == '@') {
+            if (mapa[i][j] == 'C') {
                 if (move == 'D' && j + 1 < 77) {
-                    if (mapa[i][j + 1] == '#'){
-                        mapa[i][j] = '@';
+                    if (mapa[i][j + 1] == '@'){
+                        mapa[i][j] = 'C';
                         return;
                     }
                     else {
                         mapa[i][j] = ' ';
-                        mapa[i][j + 1] = '@';
+                        mapa[i][j + 1] = 'C';
                         return;
                     }
                     
                 } 
                 else if (move == 'A' && j - 1 >= 0) {
-                    if (mapa [i][j - 1] == '#'){
-                        mapa[i][j] = '@';
+                    if (mapa [i][j - 1] == '@'){
+                        mapa[i][j] = 'C';
                         return;
                     }
                     else {
                     mapa[i][j] = ' ';
-                    mapa[i][j - 1] = '@';
+                    mapa[i][j - 1] = 'C';
                     return;
                     }
                     
                 } 
                 else if (move == 'W' && i - 1 >= 0) {
-                    if (mapa[i - 1][j] == '#'){
-                        mapa[i][j] = '@';
+                    if (mapa[i - 1][j] == '@'){
+                        mapa[i][j] = 'C';
                         return;
                     }
                     else{
                     mapa[i][j] = ' ';
-                    mapa[i - 1][j] = '@';
+                    mapa[i - 1][j] = 'C';
                     return;
                     }
                     
                 } 
                 else if (move == 'S' && i + 1 < 27) {
-                    if (mapa[i + 1][j] == '#'){
-                        mapa[i][j] = '@';
+                    if (mapa[i + 1][j] == '@'){
+                        mapa[i][j] = 'C';
                         return;
                     }
                     else{
                         mapa[i][j] = ' ';
-                        mapa[i + 1][j] = '@';
+                        mapa[i + 1][j] = 'C';
                         return;
                     }
                 }
@@ -115,8 +115,6 @@ int main() {
         system("cls");
         
         Move(mapa, move); 
-        
-        Sleep(100);
     }
     
 }   
